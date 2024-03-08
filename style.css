@@ -2,12 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Courier New', Courier, monospace;
+    color: aliceblue;
     
 }
 body{
-     background: rgb(20, 34, 47);
-        color: azure;
+    background-image: url('image.png');
+    background-size: auto;
+    background-repeat: repeat-y;
 }
 
 .header{
@@ -16,7 +17,7 @@ body{
     left: 0;
     width: 100%;
     padding: 20px 10px ;
-    background: rgb(20, 34, 47);
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,27 +27,38 @@ body{
 
 .logo{
     font-size: 20px;
-    color:aqua;
+    color:rgb(160, 251, 251);
     text-decoration: none;
     font-weight: 600;
 
 }
 .navbar a{
 font-size: 18px;
-color: beige;
+color: rgb(181, 189, 212);
 text-decoration: none;
 font-weight: 500;
 margin-left: 35px;
-
+background-color: white;
+padding: 10PX;
+font-weight: 777;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+border-radius: 20px;
 
 }
-navbar a :hover,navbar a.active{
 
-    font-size: 20px;
-    color: rgb(233, 245, 220);
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 35px;
+
+.navbar a:hover{
+
+    
+        
+        color: rgb(45, 5, 47);
+        
+        background-color: rgb(148, 196, 244);
+        
+        font-weight: 777;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        border-radius: 20px;
+       transition: all 2s;
     
 }
 
@@ -54,27 +66,35 @@ navbar a :hover,navbar a.active{
 {
     height: 100vh;
     width: 100%;
-    background-color: rgb(20, 34, 47);
+    
     display: flex;
     align-items: center;
-
+    justify-content: space-around;
+    
 }
 .left{
+    background-color: #13041b5a;
     
+    padding: 5px;
+    border-radius: 1vw;
+    box-shadow: 2px 2px 2px rgba(0, 255, 255, 0.5), 0 0 40px rgba(0, 255, 255, 0.5), 0 0 80px rgba(0, 255, 255, 0.5);
    
-    height:100vh ;
+    padding:10vh 5vw ;
     width: 50%;
     z-index: 99;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    border-radius:20px;
+   transition:all 2s ;
 }
-
+.left:hover{
+    transform: translateX(20px) scale(1.1);
+}
 .left h1 {
-    color: black;
-   
+    color: rgb(128, 127, 127);
+    text-shadow:2px 2px 9px rgb(111, 112, 113) ;
     font-size: 4vw;
     font-weight: 700;
     text-transform: capitalize;
@@ -86,38 +106,82 @@ navbar a :hover,navbar a.active{
     font-size:2vw;
 }
 .left button{
-    background-color:rgb(13, 117, 215);
+    background-color:rgb(1, 16, 31);
     padding: 5px;
     border-radius:5vw ;
-
+    border: 2px solid rgb(80, 77, 77);
+    text-transform: capitalize;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-left: 20px;
+    align-self: flex-start;
+    box-shadow: 3px 2px 11px white;
 }
 .left button:hover{
     cursor: pointer;
-    background-color: #12c569;
+    background-color: #000503;
     padding: 5px;
     border-radius:5vw ;
+    box-shadow: 4px 4px 9px white;
+}
+
+.right {
+    overflow: hidden;
+    background: linear-gradient( 0 0 20px rgb(2, 43, 43), 0 0 40px rgb(1, 22, 22), 0 0 80px rgb(2, 33, 33));
     
+    
+    padding: 5px;
+    border-radius: 1vw;
+    box-shadow: 0 0 40px rgba(13, 22, 22, 0.5), 0 0 20px rgba(2, 25, 25, 0.5), 0 0 40px rgba(0, 255, 255, 0.5), 0 0 80px rgba(0, 255, 255, 0.5);
+    transition: all 2s;
 }
-.right
-{overflow: hidden;
-    background-color: aqua;
-    padding: 2px;
+
+.right:hover {
+    overflow: hidden;
+    padding: 5px;
+    border-radius: 1vw;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5), 0 0 20px rgba(0, 255, 255, 0.5), 0 0 40px rgba(0, 255, 255, 0.5), 0 0 80px rgba(0, 255, 255, 0.5);
+    
+
+    transform: translateX(-20px) scale(1.1);
+
+    background: linear-gradient(rgb(141, 150, 150), 0 0 20px cyan, 0 0 40px cyan, 0 0 80px cyan);
 }
+
+
 
 .right img {
     width: 40vw;
     height: 40vh;
-    box-shadow: 2px 2px 9px white;
-    border-radius: 1vw;
+    border-radius: 2vw;
 }
 .skills{
-    background-color:rgb(20, 34, 47);
+   
     width: 100%;
    
 display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
+    position: relative;
+    /* background-color: #efb5b5; */
+    height: 100vh;
+    
+}
+.head-skill{
+    
+    position: absolute;
+    top:10;
+    
+     
+}
+.head-skill h1{
+    font-weight: 900;
+    color: rgb(211, 213, 217);
+    font-size:4vw ;
+    text-transform: uppercase;
+    
+     
 }
 .box{
 
@@ -127,14 +191,39 @@ display: flex;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: aqua;
+    background-color: rgba(3, 24, 24, 0.504);
     flex-direction: column;
+    transition:transform 2s ;
+    border-radius:5vw ;
+    
 }
 
 .box img{
     
     max-width: 20vw;
     max-height: 20vw;
+    
+}
+
+.html-box:hover{
+    
+        transform: translateX(30vw) scale(1.5);
+    
+    
+}
+
+.css-box:hover{
+    
+    transform:  scale(1.5);
+
+
+}
+
+
+.mic-box:hover{
+    
+    transform: translateX(-30vw) scale(1.5);
+
 
 }
 .project{
@@ -155,7 +244,7 @@ display: flex;
 justify-content: center;
 align-items:center; 
 flex-direction: column;
-
+color: aliceblue;
 }
 .contact h1 {
     font-size:3vw ;
